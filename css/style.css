@@ -51,15 +51,32 @@ font-family: 'Roboto', sans-serif;
 
 .modal-window {
     position: absolute;
+    display: inline-block;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1) rotateZ(1turn);
     transition: transform var(--timing-duration) var(--timing-animation);
-
     min-width: 408px;
-    min-height: 576px;
+    height: 584px;
     background-color: #FCFCFC;
 }
+
+.modal-text{
+    margin-top: 72px;
+   text-align: center;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+
+
+
+
+
+
 
 .backdrop.is-hidden .modal-window {
     transform: translate(-50%, -50%) scale(0);
@@ -130,6 +147,9 @@ img {
      padding: 0;
  }
 
+ textarea {
+    resize: none;
+ }
  
 /* Шрифты */
 /* h1 */
@@ -453,8 +473,162 @@ img {
         background: #404BBF;
     }
 
-     
+         /* Form */
+    
+         .form-container {
+             width: 360px;
+             margin-top: 16px;
+             margin-left: auto;
+             margin-right: auto;
+         }
+    
+         .form-part {
+             position: relative;
+             display: flex;
+             flex-direction: column;
+             text-align: start;
+             margin-bottom: 8px;
+         }
 
+         .form-part-comment {
+            margin-bottom: 0;
+         }
+    
+         .form-part-title {
+             margin-bottom: 4px;
+             font-weight: 400;
+             font-size: 12px;
+             line-height: 1.17;
+             letter-spacing: 0.04em;
+             color: #8E8F99;
+         }
+    
+         .form-part-text {
+             padding-left:34px;
+             padding-top: 11px;
+             padding-bottom: 11px;
+             border: 1px solid rgba(46, 47, 66, 0.4);
+             border-radius: 4px;
+             transition: border var(--timing-duration) var(--timing-animation);
+         }
+    
+         .form-part-text:focus {
+             outline: none;
+             border: 1px solid #4D5AE5;
+         }
+    
+         .form-part-text:focus+.form-icon {
+             fill: #4D5AE5;
+         }
+    
+         .comment-text {
+            width: 360px;
+            height: 120px;
+             border: 1px solid rgba(46, 47, 66, 0.4);
+             border-radius: 4px;
+             padding-inline-start: 16px;
+             padding-inline-end: 16px;
+             padding-block-end: 8px;
+             padding-block-start: 8px;
+             transition: border var(--timing-duration) var(--timing-animation);
+         }
+    
+         .comment-text::placeholder {
+             font-weight: 400;
+             font-size: 12px;
+             line-height: 1.17;
+             color: rgba(46, 47, 66, 0.4);
+             letter-spacing: 0.04em;
+         }
+    
+         .comment-text:focus {
+             outline: none;
+             border: 1px solid #4D5AE5;
+         }
+    
+           .policy-container { 
+            text-align: left;
+             width: 360px;
+             margin-left: auto;
+             margin-right: auto;
+             margin-bottom: 24px;
+         }
+         
+         
+         
+
+         .policy-label {
+            position: relative;
+            display: inline-block;
+             font-weight: 400;
+             font-size: 12px;
+             line-height: 1.17;
+             letter-spacing: 0.04em;
+             color: #8E8F99;
+            margin-top: 16px;
+         }
+
+         
+        .checkbox {
+            position: absolute;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+ 
+        .checkbox:checked + .accept-icon {
+            background-color: #404BBF;
+            border-color: #404BBF;
+
+        }
+
+         .form-icon {
+             position: absolute;
+             top: 28px;
+             left: 16px;
+             fill: #2E2F42;
+             transition: fill var(--timing-duration) var(--timing-animation);
+
+         }
+         
+         .accept-icon {
+            position: absolute;
+            bottom: 0;
+            border: 1px solid rgba(46, 47, 66, 0.4);
+            border-radius: 2px;
+            fill: rgba(244, 244, 253, 1);
+            background-color: #FFFFFF;
+            transition: background var(--timing-duration) var(--timing-animation),
+            border-color var(--timing-duration) var(--timing-animation);
+         }
+
+         .policy-text {
+            padding-left: 24px;
+         }
+         .link-policy {
+            text-decoration: underline;
+         }
+
+         .link-policy:visited {
+            color: #4D5AE5;
+         }
+         .modal-button {
+             width: 169px;
+             border: 1px solid #4D5AE5;
+             border-radius: 4px;
+             background-color: #4D5AE5;
+             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+             color: white;
+             margin-bottom: 24px;
+             padding: 0;
+         }
+
+            .modal-button-text {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+            }
     /* Feature */
 
       .list {
@@ -794,11 +968,65 @@ img {
     }
 
 
+    /* Subscribe */
+    .subscribe-container {
+       width: 453px;
+    }
 
+    .subscribe-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        margin-bottom: 16px;
+    }
 
+    .subscribe-form {
+        display: flex;
+    }
 
+    .footer-mail-input {
+        width: 264px;
+        background-color: #2E2F42;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        color: white;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        line-height: 1.33;
+    }
 
+.footer-mail-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2.0;
+    color: #FFFFFF;
+    
+}
 
+    .subscribe-button {
+        position: relative;
+        text-align: left;
+        padding-left: 24px;
+        width: 165px;
+        height: 40px;
+        margin-left: 24px;
+        border-radius: 4px;
+        border: transparent;
+        background-color: #4D5AE5;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: white;
+    }
+
+    .send-icon {
+        position: absolute;
+        top: 8px;
+        right: 24px;
+    }
 
 
     /* Portfolio */
