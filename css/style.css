@@ -584,7 +584,7 @@ img {
 
          .form-icon {
              position: absolute;
-             top: 28px;
+             top: 27px;
              left: 16px;
              fill: #2E2F42;
              transition: fill var(--timing-duration) var(--timing-animation);
