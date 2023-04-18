@@ -536,7 +536,7 @@ img {
          }
     
          .comment-text {
-            background-color: FCFCFC
+            background-color: #FCFCFC;
             width: 360px;
             height: 120px;
              border: 1px solid rgba(46, 47, 66, 0.4);
