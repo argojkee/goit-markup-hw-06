@@ -1011,8 +1011,9 @@ img {
     .subscribe-button {
        display: flex;
        align-items: center;
+       justify-content: center;
+        gap: 16px;
         
-        padding-left: 24px;
         width: 165px;
         height: 40px;
         margin-left: 24px;
@@ -1025,9 +1026,7 @@ img {
         color: white;
     }
 
-    .send-icon {
-        margin-left: 16px;
-    }
+
 
 
     /* Portfolio */
