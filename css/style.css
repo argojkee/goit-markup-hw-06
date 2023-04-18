@@ -54,6 +54,7 @@ font-family: 'Roboto', sans-serif;
     display: inline-block;
     top: 50%;
     left: 50%;
+    border-radius: 4px;
     transform: translate(-50%, -50%) scale(1) rotateZ(1turn);
     transition: transform var(--timing-duration) var(--timing-animation);
     min-width: 408px;
@@ -86,6 +87,9 @@ font-family: 'Roboto', sans-serif;
 
 .modal-window-button {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 24px;
     right: 24px;
     width: 24px;
@@ -94,10 +98,20 @@ font-family: 'Roboto', sans-serif;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition-property: background-color;
-    transition-duration: var(--timing-duration);
-    transition-timing-function: var(--timing-animation);
+    transition: background-color var(--timing-duration) var(--timing-animation);
     
+    
+    
+}
+.modal-window-button:hover .modal-window-icon {
+    
+    fill: #FFFFFF;
+
+}
+
+.modal-window-button:hover {
+    
+        background-color: #404BBF;
 }
 
 .modal-window-button:active {
@@ -108,9 +122,8 @@ font-family: 'Roboto', sans-serif;
 
 
 .modal-window-icon {
-        transition-property: fill;
-            transition-duration: var(--timing-duration);
-            transition-timing-function: var(--timing-animation);
+        transition: fill var(--timing-duration) var(--timing-animation);
+
 }
 
 .modal-window-icon {
@@ -507,6 +520,7 @@ img {
              padding-left:34px;
              padding-top: 11px;
              padding-bottom: 11px;
+             background-color: #FCFCFC;
              border: 1px solid rgba(46, 47, 66, 0.4);
              border-radius: 4px;
              transition: border var(--timing-duration) var(--timing-animation);
@@ -522,6 +536,7 @@ img {
          }
     
          .comment-text {
+            background-color: FCFCFC
             width: 360px;
             height: 120px;
              border: 1px solid rgba(46, 47, 66, 0.4);
@@ -898,13 +913,14 @@ img {
     .footer-container {
         align-items: baseline;
         display: flex;
-        gap: 120px;
+        
     }
     .part-footer-first {
         margin-right: 0;
     }
     .footer-social-container {
         display: block;
+        margin-left: 120px;
     }
 
     .social-list-footer {
@@ -971,6 +987,7 @@ img {
     /* Subscribe */
     .subscribe-container {
        width: 453px;
+       margin-left: 80px;
     }
 
     .subscribe-title {
